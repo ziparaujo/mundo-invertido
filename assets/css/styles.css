@@ -51,6 +51,10 @@
   font-weight: normal;
 }
 
+.dark-theme .invert-element {
+  transform: rotateZ(180deg) scaleX(-1);
+}
+
 /* generic styles */
 * {
   margin: 0;
