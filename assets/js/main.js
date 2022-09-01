@@ -14,6 +14,9 @@ btnSubscribe.addEventListener('click', async () => {
     character: txtCharacter.value
   }
 
-  const subscriptionId = await subscribeToHellfireClub(subscription);
-  console.log(`Inscrito com sucesso: ${subscriptionId}`);
+  const validateInput = txtName.value.length && txtEmail.value.length && txtLevel.value.length && txtCharacter.value.length;
+  if (validateInput) {
+    const subscriptionId = await subscribeToHellfireClub(subscription);
+    console.log(`Inscrito com sucesso: ${subscriptionId}`);
+  } else console.log('Preencha todos os campos.')
 })
